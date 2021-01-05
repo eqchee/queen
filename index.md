@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Queens Puzzle
 
-You can use the [editor on GitHub](https://github.com/eqchee/queen/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## About The Project
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The queens puzzle is the problem of placing chess queens on a chessboard so that no two queens threaten each other. This algorithm has been designed to determine the number of ways to place 10 to 12 queens on a 14 x 14 chessboard given the positions of 4 to 2 queens respectively.
 
-```markdown
-Syntax highlighted code block
+A naive algorithm would be computationally expensive as it would effectively involve placing 12 queens on a 12x12 chessboard, ie. 1.03E+17 possible arrangements. Constraint programming can be used to help reduce the number of possibilities to consider.  
 
-# Header 1
-## Header 2
-### Header 3
+1. Since there can only be one queen in each row,  this would help to reduce the number of possibilities to 12^12, ie. 8.92E+12
+2. If permutation of the columns for the remaining queens is considered, this would further reduce the number of possibilities to 12!, ie. 4.79E+8
+3. A check can be done to ensure there is no diagonal attack from the previously placed queens as the permutation is being generated. This will help to stop fully generating permutations that would not work and further reduce the possibilities to consider.  
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eqchee/queen/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
